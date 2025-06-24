@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Eng"
+  title: "Консольные программы"
   navbar:
     right:
       - about.qmd
-
+      - VK.qmd
 format:
   html:
     smaller: true
- #  theme: cosmo
+    # theme: cosmo
     css: styles.css
 
 

@@ -1,0 +1,52 @@
+---
+title: "vimcommander - FM"
+date: "2025-06-20"
+categories: [news, terminal, vim]
+page-layout: full
+title-block-banner: false
+toc: true
+image: "vimcommander.png"
+---
+
+![](vimcommander_1.png)
+Файловый менеджер, работающий в vim. Я настроил окрытие его по F2 вместо продлагаемого F11. Просто мне так удобнее. 
+
+
+### Установка
+
+[Скачать](https://github.com/Alukardd/vimcommander)
+
+Перетащите vimcommander.vim в ~/.vim/plugin
+
+Добавьте в свой .vimrc сопоставление с VimCommanderToggle() следующим образом:
+```
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+```
+### Использование
+
+vimcommander открывает две панели проводников файлов в верхней половине экрана vim.
+
+Цели для перемещения и копирования значений по умолчанию на другую панель, например totalcmd.
+
+TAB переключает между панелями.
+
+Ключи Vimcommander в основном совпадают с ключами totalcommander:
+```
+F3 - просмотр
+F4 - редактирование
+F5 - копировать
+F6 - переместить
+F7 - создать каталог
+F8 - удалить
+F9 - sshconnect
+Другие: CU, C-Left/C-Right, CR, BS, DEL, CH и т. д.
+```
+Выбор файлов/каталогов также работает: INS, +, -. Затем копируйте/перемещайте/удаляйте выбранные файлы.
+
+Предлагаемое связывание
+```
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+```
+**Проверено на Linux. У меня есть сведения, что на Windows это не работает.**
+
+https://github.com/Alukardd/vimcommander

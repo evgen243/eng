@@ -1,0 +1,60 @@
+---
+title: "Wayland vs X11"
+date: "2025-06-16"
+categories: [news, terminal, wayland/X11]
+page-layout: full
+title-block-banner: false
+toc: true
+image: "X11_vs_Wayland.jpg"
+---
+
+### Как узнать какой сервер установлен Wayland иди X11?
+
+Переменная XDG_SESSION_TYPE хранит тип сервера отображения, используемого системой.
+
+Следовательно, мы можем просто напечатать значение этой переменной в командной строке, чтобы определить, какой сервер отображения мы запускаем:
+
+- echo $XDG_SESSION_TYPE
+
+x11
+
+- echo $XDG_SESSION_TYPE
+
+wayland
+
+Из вывода для обоих случаев мы видим, что значениями для Xorg и Wayland будут «x11» и «wayland» соответственно.
+
+Переменная DESKTOP_SESSION может предоставить нам информацию о среде рабочего стола, которую в данный момент использует система, а также о сервере отображения:
+
+-echo $DESKTOP_SESSION
+
+gnome-xorg
+
+- echo $DESKTOP_SESSION
+
+gnome-wayland
+
+Мы можем проверить переменную WAYLAND_DISPLAY чтобы определить, работает ли в нашей системе Wayland:
+
+- echo $WAYLAND_DISPLAY
+
+wayland-0
+
+В случае с Wayland мы видим вывод «wayland-0»
+
+В случае с Xorg вывода не будет
+
+В Calculate + kde6 Plasma не получилось запустить Wayland.
+
+Нашел вот это:
+
+*Wayland может не запускаться в Calculate из-за проблем с дисплейным менеджером (DM). По умолчанию в дистрибутиве используется sddm, который, по некоторым данным, не всегда корректно поддерживает запуск Wayland*
+
+![](wayland_vs_X11.png)
+![](wayland_vs_X11_cld.png)
+
+
+
+
+
+

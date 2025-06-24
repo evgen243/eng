@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-06-21">
+
+<title>vim keyboard shortcuts – Консольные программы</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f1f70dbc9c22399c47e78477a82b0609.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Консольные программы</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../VK.html"> 
+<span class="menu-text">VK</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#самые-главные-команды" id="toc-самые-главные-команды" class="nav-link active" data-scroll-target="#самые-главные-команды">Самые главные команды:</a></li>
+  <li><a href="#это-тоже-может-очень-пригодится" id="toc-это-тоже-может-очень-пригодится" class="nav-link" data-scroll-target="#это-тоже-может-очень-пригодится">_Это тоже может очень пригодится:</a></li>
+  <li><a href="#перемещение-по-текстунормальный-режим" id="toc-перемещение-по-текстунормальный-режим" class="nav-link" data-scroll-target="#перемещение-по-текстунормальный-режим">Перемещение по тексту(нормальный режим):</a></li>
+  <li><a href="#в-обычном-режиме" id="toc-в-обычном-режиме" class="nav-link" data-scroll-target="#в-обычном-режиме">В обычном режиме:</a></li>
+  <li><a href="#режим-выделения" id="toc-режим-выделения" class="nav-link" data-scroll-target="#режим-выделения">Режим выделения:</a></li>
+  <li><a href="#работа-с-буфером-обмена" id="toc-работа-с-буфером-обмена" class="nav-link" data-scroll-target="#работа-с-буфером-обмена">Работа с буфером обмена:</a></li>
+  <li><a href="#метки" id="toc-метки" class="nav-link" data-scroll-target="#метки">Метки:</a></li>
+  <li><a href="#поиск" id="toc-поиск" class="nav-link" data-scroll-target="#поиск">Поиск:</a></li>
+  <li><a href="#давайте-подытожим-список-основных-команд-используемых-при-работе-с-окнами-в-vim." id="toc-давайте-подытожим-список-основных-команд-используемых-при-работе-с-окнами-в-vim." class="nav-link" data-scroll-target="#давайте-подытожим-список-основных-команд-используемых-при-работе-с-окнами-в-vim.">Давайте подытожим список основных команд, используемых при работе с окнами в Vim.</a></li>
+  <li><a href="#команды" id="toc-команды" class="nav-link" data-scroll-target="#команды">Команды:</a></li>
+  <li><a href="#давайте-подытожим-список-команд-для-работы-с-вкладками" id="toc-давайте-подытожим-список-команд-для-работы-с-вкладками" class="nav-link" data-scroll-target="#давайте-подытожим-список-команд-для-работы-с-вкладками">Давайте подытожим список команд для работы с вкладками:</a></li>
+  <li><a href="#вот-основные-команды-для-работы-с-буферами" id="toc-вот-основные-команды-для-работы-с-буферами" class="nav-link" data-scroll-target="#вот-основные-команды-для-работы-с-буферами">Вот основные команды для работы с буферами:</a></li>
+  <li><a href="#минимальные-основы" id="toc-минимальные-основы" class="nav-link" data-scroll-target="#минимальные-основы">МИНИМАЛЬНЫЕ ОСНОВЫ</a></li>
+  <li><a href="#как-использовать-редактор-vim" id="toc-как-использовать-редактор-vim" class="nav-link" data-scroll-target="#как-использовать-редактор-vim">КАК ИСПОЛЬЗОВАТЬ РЕДАКТОР VIM</a></li>
+  <li><a href="#командный-режим-vim" id="toc-командный-режим-vim" class="nav-link" data-scroll-target="#командный-режим-vim">КОМАНДНЫЙ РЕЖИМ VIM</a></li>
+  <li><a href="#командная-строка-vim" id="toc-командная-строка-vim" class="nav-link" data-scroll-target="#командная-строка-vim">КОМАНДНАЯ СТРОКА VIM</a></li>
+  <li><a href="#редактирование-файла-в-vim" id="toc-редактирование-файла-в-vim" class="nav-link" data-scroll-target="#редактирование-файла-в-vim">РЕДАКТИРОВАНИЕ ФАЙЛА В VIM</a></li>
+  <li><a href="#поиск-и-замена-в-vim" id="toc-поиск-и-замена-в-vim" class="nav-link" data-scroll-target="#поиск-и-замена-в-vim">ПОИСК И ЗАМЕНА В VIM</a></li>
+  <li><a href="#одновременное-редактирование-нескольких-файлов" id="toc-одновременное-редактирование-нескольких-файлов" class="nav-link" data-scroll-target="#одновременное-редактирование-нескольких-файлов">ОДНОВРЕМЕННОЕ РЕДАКТИРОВАНИЕ НЕСКОЛЬКИХ ФАЙЛОВ</a></li>
+  <li><a href="#буфер-обмена-vim" id="toc-буфер-обмена-vim" class="nav-link" data-scroll-target="#буфер-обмена-vim">БУФЕР ОБМЕНА VIM</a></li>
+  <li><a href="#кириллица-в-vim" id="toc-кириллица-в-vim" class="nav-link" data-scroll-target="#кириллица-в-vim">КИРИЛЛИЦА В VIM</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">vim keyboard shortcuts</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+    <div class="quarto-category">terminal</div>
+    <div class="quarto-category">vim</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 21, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Горячие клавиши для vim</p>
+<section id="самые-главные-команды" class="level3">
+<h3 class="anchored" data-anchor-id="самые-главные-команды">Самые главные команды:</h3>
+<pre><code>vim &lt;’имя файла’&gt; - открыть файл в терминале
+:q - выйти из vim(закрыть)
+:wq - записать(сохранить документ) и выйти
+:q! - выйти без сохранения
+:w - сохранить файл; 
+:buffers - посмотреть открытые файлы.
+Ctrl+P - оно с буферами умеет работать, с недавно открывавшимися файлами и интуитивно понятно работает.</code></pre>
+</section>
+<section id="это-тоже-может-очень-пригодится" class="level3">
+<h3 class="anchored" data-anchor-id="это-тоже-может-очень-пригодится">_Это тоже может очень пригодится:</h3>
+<pre><code>Из внешнего документа скопировать текст_ - ctrl+c
+и вставить в _vim_ - ctrl+shift+v
+or 
+shift+insert(предпочтительнее)
+из _vim_ копировать в др.документ - shift+выделить текст,
+вставить в др.документе - нажать среднюю кнопку мыши или ctrl+v
+**_Работает в Ubuntu 20,Slackware 15 - точно!_**
+**_Будут нужны установленные xclip,xsel_**</code></pre>
+</section>
+<section id="перемещение-по-текстунормальный-режим" class="level3">
+<h3 class="anchored" data-anchor-id="перемещение-по-текстунормальный-режим">Перемещение по тексту(нормальный режим):</h3>
+<p><strong>h</strong> - Влево</p>
+<p><strong>l(L)</strong> - Вправо</p>
+<p><strong>j</strong> - Вниз</p>
+<p><strong>k</strong> - Вверх</p>
+<p><strong>w</strong> - Вперед на первую букву слова</p>
+<p><strong>e</strong> - Вперед на последнюю букву слова</p>
+<p><strong>b</strong> - Назад на первую букву слова</p>
+<p><strong>ge</strong> - Назад на последнюю букву слова</p>
+<pre><code>d - удалить символ;
+dd - удалить всю строку;
+D - удалить символы начиная от курсора и до конца строки;
+y - копировать символ;
+yy или Y - скопировать всю строку;
+v - выделить текст;
+p - вставить после позиции курсора;
+P - вставить перед позицией курсора;
+u - отменить последнее действие;
+. - повторить еще раз последнее действие;
+U - отменить последнее действие в текущей строке;
+/шаблон - искать вхождение;
+%s/шаблон/заменить - заменить первое слово на второе;
+n - продолжить поиск вперед;
+N - продолжить поиск назад;</code></pre>
+<p><strong>W</strong> - То, же, что и w, но словом считается то, что отделено пустыми символами</p>
+<p><strong>E</strong> - То, же, что и e, но словом считается то, что отделено пустыми символами</p>
+<p><strong>B</strong> - То, же, что и b, но словом считается то, что отделено пустыми символами</p>
+<p><strong>gE</strong> - То, же, что и ge, но словом считается то, что отделено пустыми символами ^ На первый непустой символ строки</p>
+<p><strong>$</strong>, - End На конец строки</p>
+<p><strong>0</strong> - (ноль), Home На начало строки</p>
+<p><strong>(</strong> - На первую точку слева от курсора (если она есть, в противном случае на начало абзаца)</p>
+<p><strong>)</strong> - На первую точку справа от курсора (если она есть, в противном случае на конец абзаца)</p>
+<p><strong>{</strong> - На абзац назад до пустой строки</p>
+<p><strong>}</strong> - На абзац вперед до пустой строки</p>
+<p><strong>gj</strong> - На одну экранную строку вниз. Экранная строка — это целая строка длиной меньше ширины экрана, либо часть длинной строки, разделенной на экране на несколько</p>
+<p><strong>gk</strong> - На одну экранную строку вверх.</p>
+<p><strong>f#</strong> - Поиск вперед в строке символа # и установка курсора на него</p>
+<p><strong>F#</strong> - Поиск назад в строке символа # и установка курсора на него</p>
+<p><strong>t#</strong> - Поиск вперед в строке символа # и установка курсора после него</p>
+<p><strong>T#</strong> - Поиск назад в строке символа # и установка курсора после него</p>
+<p><strong>;</strong> - Повтор поиска вперед символа, найденного при помощи f/t/F/T</p>
+<p><strong>,</strong> - Повтор поиска назад символа, найденного при помощи f/t/F/T</p>
+<p><strong>%</strong> - Перемещение курсора на скобку, парную той, на которой находится курсор. Парные символы можно задать при помощи команды:</p>
+<p><strong>:set matchpairs</strong></p>
+<p><strong>:№</strong> - Перемещение курсора на строку №…</p>
+<p><strong>№G</strong> - Перемещение курсора на строку №…, аналогично :№…</p>
+<p><strong>gg</strong> - Перемещение курсора в начало</p>
+<p><strong>G</strong> - Перемещение курсора в конец</p>
+<p><strong>№%</strong> - Перемещение курсора на №… процентов от начала</p>
+<p><strong>H</strong> - Перемещение курсора на начало видимой части текста</p>
+<p><strong>M</strong> - Перемещение курсора на середину видимой части текста</p>
+<p><strong>L</strong> - Перемещение курсора на конец видимой части текста</p>
+<p><strong>Control+u</strong> - На полэкрана вверх</p>
+<p><strong>Control+d</strong> - На полэкрана вниз</p>
+<p><strong>Control+y</strong> - На одну строку вверх. Курсор при этом не перемещается</p>
+<p><strong>Control+e</strong> - На одну строку вниз. Курсор при этом не перемещается</p>
+<p><strong>Control+b</strong> - На один экран минус 2 строки вверх</p>
+<p><strong>Control+f</strong> - На одну экран минус 2 строки вниз</p>
+<p><strong>zt</strong> - Прокрутка текста так, чтобы курсор оказался вверху экрана</p>
+<p><strong>zz</strong> -Прокрутка текста так, чтобы курсор оказался в середине экрана</p>
+<p><strong>zb</strong> - Прокрутка текста так, чтобы курсор оказался внизу экрана</p>
+</section>
+<section id="в-обычном-режиме" class="level3">
+<h3 class="anchored" data-anchor-id="в-обычном-режиме">В обычном режиме:</h3>
+<pre><code>_«_ Сдвинуть строку влево (табуляция)
+_»_ Сдвинуть строку вправо (табуляция)</code></pre>
+</section>
+<section id="режим-выделения" class="level3">
+<h3 class="anchored" data-anchor-id="режим-выделения">Режим выделения:</h3>
+<p><strong>v</strong> - Войти в режим выделения символов</p>
+<p><strong>V</strong> - Войти в режим выделения строк</p>
+<p><strong>Control+Shift+v</strong> - Войти в режим выделения прямоугольного блока текста</p>
+<p><strong>gv</strong> - Выделяет текст, который был выделен предыдущей командой выделения</p>
+<p><strong>o</strong> - Перемещение курсора в области блочного выделения для изменения размера влево</p>
+<p><strong>O</strong> - Перемещение курсора в области блочного выделения для изменения размера вправо</p>
+<p><strong>I</strong> - Включить вставку символов в блочном выделении. После нажатия I набираются символы, а по окончании нажимаете Escape. Все набранные символы будут вставлены в каждую строку</p>
+<p><strong>с</strong> - Аналогично I, но перед вставкой символов удаляет всё, что было выделено блоком</p>
+<p><strong>с</strong> - Аналогично I, но перед вставкой символов удаляет всё от левого края выделения до конца строки</p>
+<p><strong>u</strong> - Изменить регистр выделенных символов на нижний</p>
+<p><strong>U</strong> - Изменить регистр выделенных символов на верхний</p>
+<p><strong>~</strong> - Изменить регистр выделенных символов на противоположный</p>
+<p><strong>J</strong> - Объединить все строки, находящиеся в области выделения</p>
+<p><strong>r</strong> - Заменить все символы на введенный после r, например rx заменит все символы в области выделения на x</p>
+<p><strong>&lt;</strong> - Сдвинуть выделенный блок влево (табуляция)</p>
+<p><strong>&gt;</strong> - Сдвинуть выделенный блок вправо (табуляция)</p>
+</section>
+<section id="работа-с-буфером-обмена" class="level3">
+<h3 class="anchored" data-anchor-id="работа-с-буфером-обмена">Работа с буфером обмена:</h3>
+<p>**«*yy** - Скопировать строку в буфер обмена текущего выделения. Потом можно вставить скопированное в любом приложении нажатием средней кнопки (колесика) мыши</p>
+<p><strong>«+yy</strong> - Скопировать строку в буфер обмена. Потом можно вставить скопированное в любом приложении нажатием Ctrl+v</p>
+<p><strong>«ayy</strong> - Скопировать строку в регистр a (имена регистров соответствуют буквам латинского алфавита, возможны имена a-z)</p>
+<p><strong>«Ayy</strong> - Добавить строку в регистр a</p>
+<p><strong>«ap</strong> - Вставить текст из регистра a</p>
+</section>
+<section id="метки" class="level3">
+<h3 class="anchored" data-anchor-id="метки">Метки:</h3>
+<p><strong>mx</strong> - Создать метку с именем x</p>
+<p><strong>`x</strong> - Переместить курсор на метку x</p>
+<p><strong>’x</strong> - Переместить курсор на строку с меткой x</p>
+<p><strong>:marks</strong> - Просмотреть все существующие в данный момент метки</p>
+<p><strong>Ctrl+Shift+o</strong> - Перемещение по меткам назад</p>
+<p><strong>Ctrl+Shift+i</strong> - Перемещение по меткам вперед</p>
+<p><strong>‘ ’</strong> - Переместить курсор на предыдущую метку</p>
+</section>
+<section id="поиск" class="level3">
+<h3 class="anchored" data-anchor-id="поиск">Поиск:</h3>
+<p><strong>/</strong> - Войти в режим ввода выражения для поиска. В vim можно использовать при поиске регулярные выражения, при этом символы «.», «*», «[«, «]», «^», «%», «/», «», «?», «~», «$» являются специальными и их обязательно надо экранировать обратным слэшем («»)</p>
+<p><strong>noh</strong> - выйти из режима поиска,выключит подсветку найденого.</p>
+<p><strong>?</strong> - То же, что и /, но поиск будет производиться в обратном порядке</p>
+<p><strong>n</strong> - Повторить поиск вперед</p>
+<p><strong>N</strong> - Повторить поиск назад</p>
+<p>* - Поиск слова, на котором стоит курсор, вперед, со строгим соответствием(звездочка без скобок)</p>
+<p><strong>#</strong> - Поиск слова, на котором стоит курсор, назад, со строгим соответствием</p>
+<p>g* - Поиск слова, на котором стоит курсор, вперед, с нестрогим соответствием, то есть, если курсор на слове win, то будет найдено также слово winter</p>
+<p><strong>g#</strong> - Поиск слова, на котором стоит курсор, назад, с нестрогим соответствием /выражениеоиск слова без учета регистра, независимо от настроек <strong>vim</strong>. Переключать учет регистра можно командами «:<strong>set ignorecase» и «:set noignorecase</strong>»</p>
+<p><strong>&lt;</strong> - Обозначение начала слова при поиске. /<br>
+</p>
+<p><strong>&gt;</strong> - Обозначение конца слова при поиске. <strong>win</strong> — найти только /<win>., но не <strong>winter</strong></win></p>
+<p><strong>/выражение/b+1</strong> - Найти выражение и установить курсор на символ +1 от начального, то есть на второй</p>
+<p><strong>/выражение/e-3</strong> - Найти выражение и установить курсор на символ -3 от конечного</p>
+<p><strong>?выражение?b+1</strong> - То же, что и /выражение/b+1, но с поиском в обратную строну</p>
+<p><strong>?выражение?e-3</strong> - То же, что и /выражение/e-3, но с поиском в обратную строну стрелка вверх При вводе строки для поиска просмотр истории поиска выражений, начинающихся с того, что уже набрано</p>
+</section>
+<section id="давайте-подытожим-список-основных-команд-используемых-при-работе-с-окнами-в-vim." class="level3">
+<h3 class="anchored" data-anchor-id="давайте-подытожим-список-основных-команд-используемых-при-работе-с-окнами-в-vim.">Давайте подытожим список основных команд, используемых при работе с окнами в Vim.</h3>
+<p><strong>:split</strong> или <strong>Ctrl+w s</strong> — добавляет в сессию Vim горизонтальное окно</p>
+<p><strong>:vsplit</strong> или <strong>Ctrl+w v</strong> — добавляет в сессию Vim вертикально окно</p>
+<p><strong>:split filename</strong> — добавляет в сессию Vim горизонтальное окно и загружает в него filename</p>
+<p><strong>:vsplit filename</strong> — добавляет в сессию Vim вертикальное окно и загружает в него filename</p>
+<p><strong>Ctrl+w h</strong>— переключает на левое окно, относительно текущего</p>
+<p><strong>Ctrl+w l</strong> — переключает на правое окно, относительно текущего</p>
+<p><strong>Ctrl+w j</strong> — переключает на нижнее окно, относительно текущего</p>
+<p><strong>Ctrl+w k</strong> — переключает на верхнее окно, относительно текущего</p>
+<p><strong>Ctrl+w</strong> <strong>Ctrl+w</strong> — переключает на следующее окно</p>
+<p><strong>Ctrl+w r</strong> — передвигает окна по часовой стрелке</p>
+<p><strong>Ctrl+w R</strong> — передвигает окна против часовой стрелки</p>
+<p><strong>Ctrl+w c</strong> — закрывает текущее окно</p>
+<p><strong>Ctrl-w стрелочки :)</strong> — переместиться на окно влево/вправо/вверх/вниз</p>
+<p><strong>Сtrl-w o</strong> — развернуть окно</p>
+<p><strong>Ctrl-w c</strong> — закрыть</p>
+<p><strong>Ctrl-w s</strong> — разделить окно по горизонтали</p>
+<p><strong>Ctrl-w v</strong> — тоже, только по вертикали</p>
+<p><strong>Ctrl+w +</strong> — увеличение размера окна по горизонтали;</p>
+<p><strong>Ctrl+w —</strong> — уменьшение размера окна по горизонтали;</p>
+<p><strong>Ctrl+w &gt;</strong> — увеличение размера окна по вертикали;</p>
+<p><strong>Ctrl+w &lt;</strong> — уменьшение размера окна по вертикали;</p>
+<p><strong>Ctrl-w ]</strong> — разделить и перейти на определение чего-то, что под курсором</p>
+<p><strong>Ctrl-w f</strong> — разделить и в новом окне открыть файл путь к которому находится под курсором, очень удобно делать на инклюдах</p>
+</section>
+<section id="команды" class="level3">
+<h3 class="anchored" data-anchor-id="команды">Команды:</h3>
+<p><strong>:split</strong> — разделить, если указан файл то открыть его</p>
+<p><strong>:vsplit</strong> — тоже только по вертикали</p>
+<p><strong>:sb[uffer**] — разделить и редактировать буффер. Важный момент: если заново открыть файл (к примеру через </strong>:split**) то буфер сбрасывается, вместе с историей отмен и положением курсора</p>
+</section>
+<section id="давайте-подытожим-список-команд-для-работы-с-вкладками" class="level3">
+<h3 class="anchored" data-anchor-id="давайте-подытожим-список-команд-для-работы-с-вкладками">Давайте подытожим список команд для работы с вкладками:</h3>
+<p><strong>vim -p filename1 filename2</strong> — запустит <strong>Vim</strong> и откроет (или создаст новые) файлы <strong>filename1</strong> и <strong>filename2</strong> в двух вкладках</p>
+<p><strong>:tabnew</strong> — откроет пустую вкладку</p>
+<p><strong>:tabnew filename</strong>— откроет новую вкладку и загрузит (создаст новый) в ней файл filename</p>
+<p><strong>gt</strong> — переключит на следующую вкладку</p>
+<p><strong>gT</strong> — переключит на предыдущую вкладку</p>
+<p><strong>:tabc</strong> — закроет текущую вкладку</p>
+<pre><code>И так, буфер это некий сеанс редактирования определённого файла. 
+К примеру если вы открыли **.vimrc** и в запущенном виме выполнели **:e .bashrc**, то откроется **.bashrc**. 
+Тем не менее буфер с **.vimrc** останется открытым и доступным для редактирования. </code></pre>
+</section>
+<section id="вот-основные-команды-для-работы-с-буферами" class="level3">
+<h3 class="anchored" data-anchor-id="вот-основные-команды-для-работы-с-буферами">Вот основные команды для работы с буферами:</h3>
+<p><strong>:bn</strong> - следующий буфер</p>
+<p><strong>:bp</strong> - предыдущий</p>
+<p><strong>:ls</strong> - просмотреть открытые буферы</p>
+<p><strong>:b</strong> - имя_буфера переключиться на буфер, очень удобно комбинируется с табом, к примеру пишем <strong>:b domain</strong>, жмём таб и нам подставляется открытый <strong>iis_domain.cpp</strong></p>
+<p><strong>:bd</strong> - удалить текущий буфер, правда стоит заметить, что если этот буфер единственное окно то <strong>vim</strong> закроется</p>
+<p><strong>:bd</strong> - имя_буфера удалить буфер по имени</p>
+</section>
+<section id="минимальные-основы" class="level3">
+<h3 class="anchored" data-anchor-id="минимальные-основы">МИНИМАЛЬНЫЕ ОСНОВЫ</h3>
+<p>На данный момент существует две версии редактора - vi и vim. Vim расшифровывается как Vi Improved, улучшенный vi.</p>
+<p>Буду писать vi, это значит, что я предполагаю использование vim.</p>
+<p>Текстовый редактор Vim может работать в двух режимах.</p>
+<p>Это и есть его главная особенность.</p>
+<p>Первый режим, который используется по умолчанию при открытии редактора - это командный. В этом режиме вы можете вводить команды vi, а также использовать символьные клавиши для управления редактором.</p>
+<p>Второй режим - обычное редактирование текста, он работает так же как и редактирование текста в nano.</p>
+<p>Для переключения в командный режим используется клавиша Esc.</p>
+<p>Для переключения в режим редактирования - клавиша i.</p>
+<p>Если вас интересует только как в редакторе vi сохранить и выйти, листайте вниз, но если вы хотите узнать как пользоваться текстовым редактором vim, эта статья для вас.</p>
+<p>Дело в том, что команд и сочетаний клавиш у vim очень много и запомнить их все без практики невозможно.</p>
+<p>Для запуска обучения наберите:</p>
+<pre><code>vimtutor</code></pre>
+</section>
+<section id="как-использовать-редактор-vim" class="level3">
+<h3 class="anchored" data-anchor-id="как-использовать-редактор-vim">КАК ИСПОЛЬЗОВАТЬ РЕДАКТОР VIM</h3>
+<p>Синтаксис Vim очень прост:</p>
+<pre><code>$ vim опции имя_файла
+Или:
+$ vi опции имя_файла</code></pre>
+<p>Простой запуск vim без указания имени файла приведет к созданию пустого файла.</p>
+<p>А теперь давайте рассмотрим основные опции запуска:</p>
+<p>• +номер - переместить курсор к указной строке после запуска.</p>
+<p>• +/шаблон - выполнить поиск по шаблону и переместить курсор к первому вхождению</p>
+<p>• “+команда” - выполнить команду после запуска программы</p>
+<p>• -b - двоичный режим, для редактирования исполняемых файлов.</p>
+<p>• -d - режим поиска различий в файлах, нужно указать несколько файлов для открытия.</p>
+<p>• -g - графический режим.</p>
+<p>• -n - не использовать автосохранение для восстановления файла при сбое.</p>
+<p>• -R - режим только для чтения.</p>
+<p>• -w - сохранить все действия в файл.</p>
+<p>• -x - шифровать файл при записи.</p>
+<p>• -C - режим совместимости с Vi.</p>
+<p>Круто, правда? Но это только начало. Опции ничего по сравнению с командами редактора.</p>
+</section>
+<section id="командный-режим-vim" class="level3">
+<h3 class="anchored" data-anchor-id="командный-режим-vim">КОМАНДНЫЙ РЕЖИМ VIM</h3>
+<p>В командном режиме вы можете перемещаться по редактируемому тексту и выполнять действия над ним с помощью буквенных клавиш. Именно этот режим открывается по умолчанию при старте редактора. Здесь вы будете использовать краткие команды, перед которыми может устанавливаться номер, чтобы повторить команду несколько раз. Для начинающих может быть поначалу очень запутанно то, что в командном режиме символы интерпретируются как команды.</p>
+<p>Для перемещения используются такие команды:</p>
+<p>• h - на один символ влево;</p>
+<p>• l - на один символ вправо;</p>
+<p>• j - на одну строку вниз;</p>
+<p>• k - на одну строку вверх;</p>
+<p>• w - на слово вправо;</p>
+<p>• b - на слово влево;</p>
+<p>• H - перейти в низ экрана;</p>
+<p>• G - перейти в конец файла;</p>
+<p>Можете запустить редактор и поэкспериментировать, чтобы было легче понять как это работает. Если перед тем как нажать кнопку буквы нажать цифру, то эта команда будет повторена несколько раз. Например, 3j переведет курсор на три строки вверх.</p>
+<p>Для переключения в режим редактирования используются такие команды:</p>
+<p>• i - вставить текст с позиции курсора, символ под курсором будет заменен;</p>
+<p>• I - вставить текст в начало строки;</p>
+<p>• a - добавить текст начиная от позиции курсора;</p>
+<p>• o - вставить новую строку после этой и начать редактирование;</p>
+<p>• O - вставить новую строку перед этой и начать редактирование;</p>
+<p>• r - заменить текущий символ;</p>
+<p>• R - заменить несколько символов.</p>
+<p>К этим командам тоже применимы символы повторения. Поэкспериментируйте, можно получить интересный и не совсем ожиданий результат. Более сложны команды редактирования текста. Вы можете править текст не только в обычном режиме, но и в командном с помощью команд.</p>
+<p>Для этого применяются такие команды:</p>
+<p>• d - удалить символ;</p>
+<p>• dd - удалить всю строку;</p>
+<p>• D - удалить символы начиная от курсора и до конца строки;</p>
+<p>• y - копировать символ;</p>
+<p>• yy или Y - скопировать всю строку;</p>
+<p>• v - выделить текст;</p>
+<p>Эти команды редактора vim работают немного по-другому после нажатия одной из них ничего не произойдет. Мы еще можем задать количество символов, к которым будет применена команда и направление, с помощью кнопок перемещения курсора. Например, чтобы удалить два символа справа от курсора нажмите d3l, а чтобы удалить три строки вниз - d3j. Команды yy, dd, Y - не что иное, как сокращения.</p>
+<p>Кроме этих команд, есть еще несколько полезных, которые мы не можем не рассмотреть:</p>
+<p>• p - вставить после позиции курсора;</p>
+<p>P - вставить перед позицией курсора;</p>
+<p>• u - отменить последнее действие;</p>
+<p>• . - повторить еще раз последнее действие;</p>
+<p>• U - отменить последнее действие в текущей строке;</p>
+<p>• /шаблон - искать вхождение;</p>
+<p>• %s/шаблон/заменить - заменить первое слово на второе;</p>
+<p>• n - продолжить поиск вперед;</p>
+<p>• N - продолжить поиск назад;</p>
+<p>С основными командами разобрались. Но у нас есть еще командная строка Vim, которая сама по себе тоже представляет огромный интерес.</p>
+</section>
+<section id="командная-строка-vim" class="level3">
+<h3 class="anchored" data-anchor-id="командная-строка-vim">КОМАНДНАЯ СТРОКА VIM</h3>
+<p>Командная строка Vim запускается в командном режиме нажатием двоеточия - “:”. Здесь доступны команды для сохранения файла и выхода из редактора, настройки внешнего вида и взаимодействия с внешней оболочкой.</p>
+<p>Рассмотрим наиболее часто используемые команды редактора vim:</p>
+<p>• :w - сохранить файл;</p>
+<p>• :q - закрыть редактор;</p>
+<p>• :q! - закрыть редактор без сохранения;</p>
+<p>• :e файл - прочитать содержимое файла в позицию курсора;</p>
+<p>• :r файл - вставить в содержимое файла в следующую строку;</p>
+<p>• :r! - выполнить команду оболочки и вставить ответ в редактор;</p>
+<p>• :set переменная=значение - установить значение переменной, например, tabstop=4, или set number, с помощью этой команды можно управлять многими аспектами работы vim.</p>
+<p>• :buffers - посмотреть открытые файлы.</p>
+<p>Со всеми основами разобрались, и вы теперь использование vim не будет казаться вам таким сложным. Но это еще далеко не все, этот мощный редактор может еще очень многое. Дальше мы рассмотрим несколько примеров использования vim, чтобы вам было легче справиться с новой программой.</p>
+</section>
+<section id="редактирование-файла-в-vim" class="level3">
+<h3 class="anchored" data-anchor-id="редактирование-файла-в-vim">РЕДАКТИРОВАНИЕ ФАЙЛА В VIM</h3>
+<p>Несмотря на то, что из всего вышесказанного можно понять как это делается рассмотрим еще раз. Чтобы открыть файл выполните: vim имя_файла Затем, если вы не хотите пока использовать возможности командного режима просто нажмите i, чтобы перейти в режим редактирования. Здесь вы можете редактировать файл так же, как и в nano. После того как завершите нажмите Esc, чтобы перейти в командный режим и наберите :wq. Записать и выйти. Все, готово.</p>
+</section>
+<section id="поиск-и-замена-в-vim" class="level3">
+<h3 class="anchored" data-anchor-id="поиск-и-замена-в-vim">ПОИСК И ЗАМЕНА В VIM</h3>
+<p>Довольно часто нам нужно найти определенную последовательность в тексте.</p>
+<p>Текстовый редактор Vim умеет это делать.</p>
+<p>Во-первых, если нужно найти символ в строке, нажмите f и наберите нужный символ, курсор будет перемещен к его позиции.</p>
+<p>Для поиска по всему файлу используйте команду /.</p>
+<p>После нее нужно ввести слово, которое нужно найти.</p>
+<p>Для поиска следующего вхождения используйте n,</p>
+<p>для предыдущего - N.</p>
+<p>Для замены будет использоваться немного другая конструкция:</p>
+<pre><code>:%s/искать/заменить/g</code></pre>
+<p>Двоеточие запускает командную оболочку с командой s для замены. Символ % означает что обрабатывать нужно весь файл, а g значит, что нужно обработать все найденные строки, а не только первую. Чтобы программа спрашивала перед каждой заменой можно добавить в конец строки опцию c.</p>
+</section>
+<section id="одновременное-редактирование-нескольких-файлов" class="level3">
+<h3 class="anchored" data-anchor-id="одновременное-редактирование-нескольких-файлов">ОДНОВРЕМЕННОЕ РЕДАКТИРОВАНИЕ НЕСКОЛЬКИХ ФАЙЛОВ</h3>
+<p>Чтобы открыть несколько файлов, просто передайте их в параметры при запуске программы: vim файл1 файл2 файл3</p>
+<p>Редактор vim linux откроет первый файл, для переключения ко второму используйте команду :n, чтобы вернутся назад :N.</p>
+<p>С помощью команды :buffers вы можете посмотреть все открытые файлы, а командой :buffer 3 переключится на третий файл.</p>
+</section>
+<section id="буфер-обмена-vim" class="level3">
+<h3 class="anchored" data-anchor-id="буфер-обмена-vim">БУФЕР ОБМЕНА VIM</h3>
+<p>Текстовый редактор Vim имеет свой буфер обмена. Например, вам нужно скопировать в четыре строки и вставить их в другое место программы, для этого выполните такую последовательность действий:</p>
+<p>• Нажмите Esc, чтобы перейти в командный режим;</p>
+<p>• Наберите 4yy чтобы скопировать четыре строки;</p>
+<p>• Переместите курсор в место где нужно вставить эти строки;</p>
+<p>• Нажмите p для вставки.</p>
+<p>Также можно использовать выделение vim, чтобы скопировать строки. Выделите текст с помощью v, а затем нажмите y, чтобы скопировать.</p>
+</section>
+<section id="кириллица-в-vim" class="level3">
+<h3 class="anchored" data-anchor-id="кириллица-в-vim">КИРИЛЛИЦА В VIM</h3>
+<p>Кириллица в Vim работает превосходно. Но есть одно но, когда включена кириллица в системе, все команды vim не работают, им и не нужно работать, они же не приспособлены для кириллицы. Но переключать каждый раз раскладку, когда работаете в командном режиме тоже не очень удобно.</p>
+<p>открываем файл ~/.vimrc и добавляем туда такие строки:</p>
+<pre><code>set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

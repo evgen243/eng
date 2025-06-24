@@ -1,0 +1,41 @@
+---
+title: "copy/paste from/to vim"
+date: "2025-06-23"
+categories: [news, terminal, vim]
+page-layout: full
+title-block-banner: false
+toc: true
+image: "vim+copy+paste.jpg"
+---
+
+### _Это тоже может очень пригодится:_
+
+```
+Из внешнего документа скопировать текст:
+ctrl+c
+Вставить в vim: 
+ctrl+shift+v
+or 
+shift+insert - (предпочтительнее)
+``` 
+из vim копировать в др.документ - shift+выделить текст,
+ 
+вставить в др.документе - нажать среднюю кнопку мыши или ctrl+v
+
+_Работает в Ubuntu 20,Slackware 15 - точно!_
+
+_Будут нужны установленные xclip,xsel_
+
+### Копирование в буфер с помощью терминала
+
+Вы можете скопировать содержимое файла в буфер непосредственно из терминала:
+```
+cat filename.txt | xclip -selection clipboard
+```
+### Вставка содержимого буфера с помощью терминала
+
+Чтобы вставить содержимое буфера в файл, вы можете использовать:
+```
+xclip -selection clipboard -o > filename.txt
+```
+
